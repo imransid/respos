@@ -1,9 +1,10 @@
 import React from 'react';
-import HomeScreen from './src/app/Screens/HomeScreen/HomeScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import HomeHeader from './src/app/Screens/HomeScreen/HomeHeader';
+import HomeScreen from './src/app/Screens/HomeScreen/HomeScreen';
+import { View } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,7 +15,11 @@ function App() {
     //     <Stack.Screen name="Ticket" component={HomeHeader} />
     //   </Stack.Navigator>
     // </NavigationContainer>
-    <HomeHeader/>
+    <View>
+      <HomeHeader/>
+      <HomeScreen/>
+    </View>
+    
   );
 }
 
