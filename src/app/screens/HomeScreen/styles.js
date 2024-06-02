@@ -33,10 +33,8 @@ const HomeStyle = StyleSheet.create({
     foodItemsContainer: {
         marginVertical: 70,
         padding: 6,
-        flex: 1,
     },
     foodItemsBox: {
-        height: 100,
         width: 'auto',
         backgroundColor: '#ccd1d1'
     },

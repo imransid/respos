@@ -1,7 +1,7 @@
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import HomeScreen from '../screens/HomeScreen';
-import HeaderStyle from '../screens/styles';
+import HomeScreen from '../screens/HomeScreen/HomeScreen';
+import HeaderStyle from '../screens/HomeScreen/styles';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 const Drawer = createDrawerNavigator();
