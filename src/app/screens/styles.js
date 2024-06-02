@@ -32,21 +32,24 @@ const HomeStyle = StyleSheet.create({
     },
     foodItemsContainer: {
         marginVertical: 70,
+        padding: 6,
         flex: 1,
     },
     foodItemsBox: {
         height: 100,
-        width: 350,
-        backgroundColor: '#b2babb'
+        width: 'auto',
+        backgroundColor: '#ccd1d1'
     },
     foodItemsBoxHeader: {
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
     foodItemsBoxHeaderText: {
-        fontSize: 18,
+        fontSize: 22,
         fontWeight: '400',
-        color: '#454545'
+        color: '#454545',
+        marginLeft: 7,
+        marginTop: 5
     },
 })
 

@@ -1,6 +1,9 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import HomeStyle from './styles';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Entypo from 'react-native-vector-icons/Entypo'
 
 export default function HomeScreen() {
   return (
@@ -19,6 +22,8 @@ export default function HomeScreen() {
         <View style={HomeStyle.foodItemsBox}>
           <View style={HomeStyle.foodItemsBoxHeader}>
             <Text style={HomeStyle.foodItemsBoxHeaderText}>COFFEE HUB</Text>
+            <AntDesign name='caretdown' size={30} color='#ccd1d1'/>
+            <Entypo name='magnifying-glass' size={30} color='#ccd1d1'/>
           </View>
         </View>
       </View>
