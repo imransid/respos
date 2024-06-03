@@ -32,8 +32,7 @@ const HomeStyle = StyleSheet.create({
         color: '#fff',
     },
     foodItemsBox: {
-        width: 'auto',
-        backgroundColor: '#ccd1d1',
+        backgroundColor: '#fff',
         marginVertical: 5,
     },
     foodItemsBoxHeader: {
@@ -47,6 +46,12 @@ const HomeStyle = StyleSheet.create({
         color: '#454545',
         marginLeft: 7,
         marginTop: 5
+    },
+    foodItemsBoxHeaderIcons: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginRight: 18,
+        gap: 50
     },
 })
 

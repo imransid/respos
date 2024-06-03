@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 const Styles = StyleSheet.create({
   image: {
     height: 120,
-    width: 120,
+    width: 110,
     marginLeft: 16,
     alignItems: 'center',
   },
@@ -11,16 +11,16 @@ const Styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '800',
     alignSelf: 'center',
+    color: '#fff'
   },
   overlay: {
     position: 'absolute',
     bottom: 0,
-    left: 0,
-    right: 0,
+    left:15,
     height: 40,
-    width: '100%',
+    width: 110,
+    justifyContent:'center',
     backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust transparency here
-    justifyContent: 'center',
   },
 });
 

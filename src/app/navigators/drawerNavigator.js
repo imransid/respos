@@ -1,8 +1,8 @@
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
-import HeaderStyle from '../screens/HomeScreen/styles';
-import Ionicons from 'react-native-vector-icons/Ionicons'
+import Icon1 from 'react-native-vector-icons/Ionicons'
+import Icon2 from 'react-native-vector-icons/Entypo'
 
 const Drawer = createDrawerNavigator();
 
@@ -21,19 +21,19 @@ function DrawerNavigator() {
             fontSize: 22
           },
           user: () => (
-            <Ionicons
+            <Icon1
               name="person-add"
-              size={30}
+              size={300}
               color="#fff"
-              style={HeaderStyle.user}
+              //style={HeaderStyle.user}
             />
           ),
           VerticalMenu: () => (
-            <Ionicons
-              name="ellipsis-vertical"
+            <Icon2
+              name="dots-three-vertical"
               size={30}
               color="#fff"
-              style={HeaderStyle.verticalMenu}
+              //style={HeaderStyle.verticalMenu}
             />
           ),
         }}
