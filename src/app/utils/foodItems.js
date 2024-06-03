@@ -95,6 +95,25 @@ const foodItems = [
     title: 'Steak',
     description: '',
   },
+  {
+    id: 17,
+    img: 'https://www.simplyrecipes.com/thmb/xTCx1mKCjjPYgGasys_JGafuem0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__04__Nachos-LEAD-3-e6dd6cbb61474c9889e1524b3796601e.jpg',
+    title: 'Nachos',
+    description: '',
+  },
+  {
+    id: 18,
+    img: 'https://images.othoba.com/images/thumbs/0595909_fuchka-200-g.webp',
+    title: 'Fuchka',
+    description: '',
+  },
+  {
+    id: 19,
+    img: 'https://i0.wp.com/spicechronicles.com/wp-content/uploads/2022/10/Jorda_2.jpg?resize=640%2C640&ssl=1',
+    title: 'Jorda',
+    description: '',
+  },
+
 ];
 
 export default foodItems;
