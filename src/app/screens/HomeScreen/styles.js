@@ -1,8 +1,8 @@
 import { StyleSheet } from "react-native";
 
 const HomeStyle = StyleSheet.create({
-    chargeBoxContainer: {
-        padding: 20,
+    homeContainer: {
+        padding: 12,
         flex: 1,
     },
     chargeBox: {
@@ -10,7 +10,8 @@ const HomeStyle = StyleSheet.create({
         width: 'auto',
         backgroundColor: '#56bc07',
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        marginVertical: 10,
     },
     chargeBoxSaveText: {
         fontSize: 20,
@@ -30,21 +31,19 @@ const HomeStyle = StyleSheet.create({
         marginRight: 60,
         color: '#fff',
     },
-    foodItemsContainer: {
-        marginVertical: 70,
-        padding: 6,
-    },
     foodItemsBox: {
         width: 'auto',
-        backgroundColor: '#ccd1d1'
+        backgroundColor: '#ccd1d1',
+        marginVertical: 5,
     },
     foodItemsBoxHeader: {
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        padding: 10
     },
     foodItemsBoxHeaderText: {
         fontSize: 22,
-        fontWeight: '400',
+        fontWeight: '600',
         color: '#454545',
         marginLeft: 7,
         marginTop: 5

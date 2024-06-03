@@ -1,21 +1,27 @@
-import { StyleSheet } from "react-native";
+import {StyleSheet} from 'react-native';
 
 const Styles = StyleSheet.create({
-    itemContainer:{
-        width:'50%',
-        backgroundColor:'blue',
-        padding:10, margin:10
-
-    },
-    title:{
-
-    },
-    description:{
-
-    },
-    image:{
-height:120
-    }
-})
+  image: {
+    height: 120,
+    width: 120,
+    marginLeft: 16,
+    alignItems: 'center',
+  },
+  imageTitle: {
+    fontSize: 18,
+    fontWeight: '800',
+    alignSelf: 'center',
+  },
+  overlay: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 40,
+    width: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust transparency here
+    justifyContent: 'center',
+  },
+});
 
 export default Styles;
