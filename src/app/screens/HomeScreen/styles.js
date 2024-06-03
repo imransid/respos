@@ -49,7 +49,7 @@ const HomeStyle = StyleSheet.create({
     },
     foodItemsBoxHeaderIcons: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         marginRight: 18,
         gap: 50
     },
