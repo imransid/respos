@@ -18,7 +18,7 @@ const HeaderStyle = StyleSheet.create({
         borderWidth: 2,
         borderColor: '#fff',
         backgroundColor: '#04a744',
-        marginRight: 120
+        marginRight: 125
     },
     cartText: {
         fontSize: 20,

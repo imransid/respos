@@ -18,6 +18,7 @@ const Style = StyleSheet.create({
     dueText: {
         fontSize: 16,
         alignSelf: 'center',
+        color: '#454545',
     }, 
     cashInputPos: {
         marginTop: 80, 

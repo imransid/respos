@@ -13,7 +13,7 @@ export default function PaymentScreen() {
   return (
     <View style={Style.container}>
       <View style={Style.payAmount}>
-        <Text style={Style.billText}>{totalAmount.toFixed(2)}</Text>
+        <Text style={Style.billText}>Tk {totalAmount.toFixed(2)}</Text>
         <Text style={Style.dueText}>Total amount due</Text>
       </View>
       <View style={Style.cashInputPos}>
