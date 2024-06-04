@@ -18,7 +18,7 @@ export default function PaymentScreen() {
       </View>
       <View style={Style.cashInputPos}>
         <Text style={Style.cashReceivedText}>Cash received</Text>
-        <TextInput placeholder="Enter amount" maxLength={18} />
+        <TextInput placeholder="Enter amount" maxLength={18} placeholderTextColor={'#454545'}/>
         <View style={Style.cashInput}></View>
       </View>
       <View style={Style.cashPayButtonPos}>
