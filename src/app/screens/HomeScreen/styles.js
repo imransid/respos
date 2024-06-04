@@ -5,7 +5,7 @@ const HomeStyle = StyleSheet.create({
         padding: 12,
         flex: 1,
     },
-    chargeBox: {
+    expensesBox: {
         height: 75,
         width: 'auto',
         backgroundColor: '#56bc07',
@@ -13,18 +13,18 @@ const HomeStyle = StyleSheet.create({
         justifyContent: 'space-between',
         marginVertical: 10,
     },
-    chargeBoxSaveText: {
+    expensesBoxSaveText: {
         fontSize: 20,
         fontWeight: 'bold',
         alignSelf: 'center',
         marginLeft: 60,
         color: '#fff',
     },
-    chargeBoxCharge: {
+    expensesBoxCharge: {
         flexDirection: 'column',
         justifyContent: 'center'
     },
-    chargeBoxChargeText: {
+    expensesBoxChargeText: {
         fontSize: 20,
         fontWeight: 'bold',
         alignSelf: 'center',
@@ -52,6 +52,24 @@ const HomeStyle = StyleSheet.create({
         justifyContent: 'center',
         marginRight: 18,
         gap: 50
+    },
+    foodItemsList: {
+        height: 520
+    },
+    clearButton: {
+        height: 40,
+        width: 100,
+        backgroundColor: '#04a744',
+        alignSelf: 'center',
+        marginTop: 20,
+        borderRadius: 10,
+    },
+    clearButtonText: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        alignSelf: 'center',
+        color: '#fff',
+        marginTop: 6
     },
 })
 

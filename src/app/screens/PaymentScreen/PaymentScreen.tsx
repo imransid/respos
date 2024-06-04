@@ -5,12 +5,15 @@ import {TextInput} from 'react-native-gesture-handler';
 import {TouchableOpacity} from 'react-native';
 import Icon1 from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon2 from 'react-native-vector-icons/SimpleLineIcons';
+import { useRoute } from '@react-navigation/native';
 
 export default function PaymentScreen() {
+  const route = useRoute();
+  const totalAmount = route.params.totalAmount || 0;
   return (
     <View style={Style.container}>
       <View style={Style.payAmount}>
-        <Text style={Style.billText}>0</Text>
+        <Text style={Style.billText}>{totalAmount.toFixed(2)}</Text>
         <Text style={Style.dueText}>Total amount due</Text>
       </View>
       <View style={Style.cashInputPos}>
