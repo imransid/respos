@@ -6,13 +6,14 @@ import Icon1 from 'react-native-vector-icons/FontAwesome6';
 import foodItems from '../../utils/foodItems';
 import FoodCard from '../../components/FoodCard/FoodCard';
 import {useNavigation} from '@react-navigation/native';
-import { MyContext } from '../../context/Context';
+import {MyContext} from '../../context/Context';
+import CartItems from '../CartItems/CartItems';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
   const [totalPrice, setTotalPrice] = useState(0);
-  const {cart,setCart} = useContext(MyContext);
-  
+  const {cart, setCart} = useContext(MyContext);
+
   // go to payment screen
   const showBill = () => {
     navigation.navigate('PaymentScreen', {totalAmount: totalPrice});
@@ -21,18 +22,28 @@ export default function HomeScreen() {
   // add the prices of the selected items
   const handleSelectItem = item => {
     setTotalPrice(prevPrice => prevPrice + item.price);
-  }; 
+  };
 
   // clear all selections
   const handleClearSelections = () => {
-    setTotalPrice(0)
-    setCart([])
+    setTotalPrice(0);
+    setCart([]);
+  };
+
+  // show Cart
+  const showCart = () => {
+    navigation.navigate('CartItems', CartItems);
   };
 
   return (
     <View style={HomeStyle.homeContainer}>
       <View style={HomeStyle.expensesBox}>
-        <Text style={HomeStyle.expensesBoxSaveText}>SAVE</Text>
+        <TouchableOpacity
+          onPress={() => {
+            showCart();
+          }}>
+          <Text style={HomeStyle.expensesBoxSaveText}>SAVE</Text>
+        </TouchableOpacity>
         <View style={HomeStyle.expensesBoxCharge}>
           <TouchableOpacity
             onPress={() => {
@@ -74,11 +85,12 @@ export default function HomeScreen() {
         />
       </View>
       <View>
-        <TouchableOpacity style={HomeStyle.clearButton} onPress={handleClearSelections}>
+        <TouchableOpacity
+          style={HomeStyle.clearButton}
+          onPress={handleClearSelections}>
           <Text style={HomeStyle.clearButtonText}>Clear All</Text>
         </TouchableOpacity>
       </View>
-      
     </View>
   );
 }

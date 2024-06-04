@@ -18,6 +18,7 @@ const HomeStyle = StyleSheet.create({
         fontWeight: 'bold',
         alignSelf: 'center',
         marginLeft: 60,
+        marginTop: 25,
         color: '#fff',
     },
     expensesBoxCharge: {

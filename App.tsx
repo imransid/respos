@@ -5,6 +5,7 @@ import HomeScreen from './src/app/screens/HomeScreen/HomeScreen';
 import DrawerNavigator from './src/app/navigators/drawerNavigator';
 import PaymentScreen from './src/app/screens/PaymentScreen/PaymentScreen';
 import { MyContext } from './src/app/context/Context';
+import CartItems from './src/app/screens/CartItems/CartItems';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,15 @@ function App(): React.JSX.Element {
           <Stack.Screen
             name="PaymentScreen"
             component={PaymentScreen}
+            options={{
+              title: ' ',
+              headerStyle: { backgroundColor: '#04a744' },
+              headerTintColor: '#fff',
+            }}
+          />
+          <Stack.Screen
+            name="CartItems"
+            component={CartItems}
             options={{
               title: ' ',
               headerStyle: { backgroundColor: '#04a744' },
