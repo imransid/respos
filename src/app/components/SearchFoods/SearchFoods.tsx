@@ -8,8 +8,10 @@ const SearchFoods = ({searchQuery, setSearchQuery}) => {
       <TextInput
         style={Styles.searchInput}
         placeholder="Search foods..."
+        placeholderTextColor={'#454545'}
         value={searchQuery}
         onChangeText={text => {setSearchQuery(text)}}
+        maxLength={15}
       />
     </View>
   );

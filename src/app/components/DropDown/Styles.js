@@ -6,6 +6,7 @@ const Styles = StyleSheet.create({
       height: 50,
       borderRadius: 1,
       padding: 12,
+      backgroundColor: '#fff'
     },
     icon: {
       marginRight: 7,
@@ -33,7 +34,8 @@ const Styles = StyleSheet.create({
     },
     underLine: {
         height: 1,
-        width: 'auto',
+        width: 358,
+        left: 17,
         backgroundColor: '#454545',
         marginVertical: -15,
     },

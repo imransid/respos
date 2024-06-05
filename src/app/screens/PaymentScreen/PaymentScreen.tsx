@@ -13,18 +13,18 @@ export default function PaymentScreen() {
   return (
     <View style={Style.container}>
       <View style={Style.payAmount}>
-        <Text style={Style.billText}>Tk {totalAmount}</Text>
+        <Text style={Style.billText}>Tk {totalAmount.toFixed(2)}</Text>
         <Text style={Style.dueText}>Total amount due</Text>
       </View>
       <View style={Style.cashInputPos}>
         <Text style={Style.cashReceivedText}>Cash received</Text>
-        <TextInput placeholder="Enter amount" maxLength={18} placeholderTextColor={'#454545'}/>
+        <TextInput placeholder="Enter amount" maxLength={18} placeholderTextColor={'#454545'} style={Style.cashValueInput}/>
         <View style={Style.cashInput}></View>
       </View>
       <View style={Style.cashPayButtonPos}>
         <TouchableOpacity style={Style.cashPayButton}>
           <View style={Style.cashIconText}>
-          <Icon1 name="cash" size={40}></Icon1>
+          <Icon1 name="cash" size={40} color={'#454545'}></Icon1>
           <Text style={Style.cashPayText}>CASH</Text>
           </View>
         </TouchableOpacity>
@@ -32,7 +32,7 @@ export default function PaymentScreen() {
       <View style={Style.cardPayButtonPos}>
         <TouchableOpacity style={Style.cardPayButton}>
           <View style={Style.cardIconText}>
-          <Icon2 name="credit-card" size={35} style={Style.cardIconPos}></Icon2>
+          <Icon2 name="credit-card" size={35} color={'#454545'} style={Style.cardIconPos}></Icon2>
           <Text style={Style.cardPayText}>CARD</Text>
           </View>
         </TouchableOpacity>

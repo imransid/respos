@@ -13,6 +13,7 @@ const Styles = StyleSheet.create({
     borderWidth: 1,
     paddingLeft: 8,
     borderRadius: 5,
+    color: '#454545',
   },
 });
 

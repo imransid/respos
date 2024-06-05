@@ -33,7 +33,10 @@ const Style = StyleSheet.create({
         width: 'auto',
         height: 1,
         backgroundColor: '#c3c8c8',
-        marginVertical: -11
+        marginVertical: -11,
+    },
+    cashValueInput: {
+        color: '#454545',
     },
     cashPayButton: {
         height: 45,
@@ -76,7 +79,7 @@ const Style = StyleSheet.create({
         justifyContent: 'center'
     },
     cardIconPos: {
-        marginTop: 3
+        marginTop: 3,
     },
 })
 

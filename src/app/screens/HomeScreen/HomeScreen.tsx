@@ -19,13 +19,13 @@ export default function HomeScreen() {
   const [showSearchBox, setShowSearchBox] = useState(false);
 
   useEffect(() => {
-    if (searchQuery.length> 0) {
+    if (searchQuery.length > 0) {
       const filtered = foodItems.filter(item =>
-        item.title?.toLowerCase().includes(searchQuery.toLowerCase())
+        item.title?.toLowerCase().includes(searchQuery.toLowerCase()),
       );
       setFilteredFoodItems(filtered);
-    } else{
-      setFilteredFoodItems([])
+    } else {
+      setFilteredFoodItems([]);
     }
   }, [searchQuery]);
 
@@ -64,11 +64,10 @@ export default function HomeScreen() {
           <Text style={HomeStyle.expensesBoxSaveText}>SAVE</Text>
         </TouchableOpacity>
         <View style={HomeStyle.expensesBoxCharge}>
-
-            <Text style={HomeStyle.expensesBoxChargeText}>CHARGE</Text>
-            <Text style={HomeStyle.expensesBoxChargeText}>
-              {totalPrice.toFixed(2)}
-            </Text>
+          <Text style={HomeStyle.expensesBoxChargeText}>CHARGE</Text>
+          <Text style={HomeStyle.expensesBoxChargeText}>
+            {totalPrice.toFixed(2)}
+          </Text>
         </View>
       </View>
       <View style={HomeStyle.foodItemsBox}>
@@ -94,16 +93,41 @@ export default function HomeScreen() {
             setSearchQuery={setSearchQuery}
           />
         )}
-        <FlatList
-          showsVerticalScrollIndicator={false}
-          data={filteredFoodItems.length>0 ? filteredFoodItems : foodItems }
-          style={HomeStyle.foodItemsList}
-          numColumns={3}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({item}) => (
-            <FoodCard key={item.id} item={item} onSelect={handleSelectItem} />
-          )}
-        />
+        {searchQuery.length !== 0 ? (
+          <>
+            {filteredFoodItems.length > 0 ? (
+              <FlatList
+                showsVerticalScrollIndicator={false}
+                data={filteredFoodItems}
+                style={HomeStyle.foodItemsList}
+                numColumns={3}
+                keyExtractor={(item, index) => index.toString()}
+                renderItem={({item}) => (
+                  <FoodCard
+                    key={item.id}
+                    item={item}
+                    onSelect={handleSelectItem}
+                  />
+                )}
+              />
+            ) : (
+              <Text style={HomeStyle.emptyListText}>
+                No Food Items Found
+              </Text>
+            )}
+          </>
+        ) : (
+          <FlatList
+            showsVerticalScrollIndicator={false}
+            data={foodItems}
+            style={HomeStyle.foodItemsList}
+            numColumns={3}
+            keyExtractor={(item, index) => index.toString()}
+            renderItem={({item}) => (
+              <FoodCard key={item.id} item={item} onSelect={handleSelectItem} />
+            )}
+          />
+        )}
       </View>
       <View>
         <TouchableOpacity

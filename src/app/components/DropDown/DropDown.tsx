@@ -52,6 +52,7 @@ const DropdownComponent = () => {
           />
         )}
         renderItem={renderItem}
+        placeholderStyle={{color: '#454545'}}
       />
       <View style={Styles.underLine}></View>
     </View>

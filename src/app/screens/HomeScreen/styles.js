@@ -55,7 +55,7 @@ const HomeStyle = StyleSheet.create({
         gap: 50
     },
     foodItemsList: {
-        height: 520
+        height: 470
     },
     clearButton: {
         height: 40,
@@ -71,6 +71,13 @@ const HomeStyle = StyleSheet.create({
         alignSelf: 'center',
         color: '#fff',
         marginTop: 6
+    },
+    emptyListText: {
+        color: '#000', 
+        textAlign: 'center', 
+        height: 300,
+        fontSize: 18,
+        fontWeight: '500',
     },
 })
 

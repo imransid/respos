@@ -55,7 +55,7 @@ const Styles = StyleSheet.create({
     expensesBoxCharge: {
         flexDirection: 'column',
         justifyContent: 'center',
-        marginLeft: 165,
+        marginLeft: 160,
     },
     expensesBoxChargeText: {
         fontSize: 20,
