@@ -3168,11 +3168,14 @@ __metadata:
     prettier: 2.8.8
     react: 18.2.0
     react-native: 0.74.1
+    react-native-animated-spinkit: 1.4.1
+    react-native-dynamic-search-bar: ^2.0.2
     react-native-element-dropdown: ^2.12.0
     react-native-gesture-handler: ^2.16.2
     react-native-reanimated: ^3.11.0
     react-native-safe-area-context: ^4.10.3
     react-native-screens: ^3.31.1
+    react-native-search-bar: ^3.5.1
     react-native-vector-icons: ^10.1.0
     react-test-renderer: 18.2.0
     typescript: 5.0.4
@@ -8095,7 +8098,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.5.10, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -8202,6 +8205,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-animated-spinkit@npm:1.4.1":
+  version: 1.4.1
+  resolution: "react-native-animated-spinkit@npm:1.4.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 5f20a144d58a6745937cd2f246476591326eec0aab19542e3900894ed11d88b4a3241f973019f3b02de86e0f2d68e6e10eaecb1b6f25d4dfca5bc93af2f08e0e
+  languageName: node
+  linkType: hard
+
+"react-native-dynamic-search-bar@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "react-native-dynamic-search-bar@npm:2.0.2"
+  peerDependencies:
+    "@freakycoder/react-native-bounceable": ">= 0.2.2"
+    react-native-spinkit: ">= 1.5.0"
+  checksum: 9f44d3c34222ebd44f5085541d6cc886eb32dd3ad518b071a1c1052dc4ee5a4e4959f0f03694eea6d2a5430363698a8ef019c9f5248c0469dc461e32e386d082
+  languageName: node
+  linkType: hard
+
 "react-native-element-dropdown@npm:^2.12.0":
   version: 2.12.0
   resolution: "react-native-element-dropdown@npm:2.12.0"
@@ -8270,6 +8293,18 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 1fc61cf7a223b3ef1c8000e74416c8953561c5fa0861557da43659db62a640e37fb51fbdc35dae810a665881a7aa9eeaf1873e90f67404b4dda53a672464a7fe
+  languageName: node
+  linkType: hard
+
+"react-native-search-bar@npm:^3.5.1":
+  version: 3.5.1
+  resolution: "react-native-search-bar@npm:3.5.1"
+  dependencies:
+    prop-types: ^15.5.10
+  peerDependencies:
+    react: ">=15.1 || >=16.0.0"
+    react-native: ">=0.40"
+  checksum: 1455285d6f06ebeef38ceb8903fb5376e55ae85dc757ea5dbd08d8b145eab4898ebada16a54ee99389f7ed4957e894425057c8c3b4845c5f4ddf4210df3346c9
   languageName: node
   linkType: hard
 

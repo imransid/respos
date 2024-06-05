@@ -9,11 +9,11 @@ import { useRoute } from '@react-navigation/native';
 
 export default function PaymentScreen() {
   const route = useRoute();
-  const totalAmount = route.params.totalAmount || 0;
+  const totalAmount = route.params || 0;
   return (
     <View style={Style.container}>
       <View style={Style.payAmount}>
-        <Text style={Style.billText}>Tk {totalAmount.toFixed(2)}</Text>
+        <Text style={Style.billText}>Tk {totalAmount}</Text>
         <Text style={Style.dueText}>Total amount due</Text>
       </View>
       <View style={Style.cashInputPos}>

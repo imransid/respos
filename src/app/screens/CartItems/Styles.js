@@ -23,7 +23,7 @@ const Styles = StyleSheet.create({
     totalPricePos: {
         flexDirection: 'row', 
         justifyContent: 'space-between',
-        marginBottom: 310, 
+        marginBottom: 320, 
         marginLeft: 30
     },
     totalPriceText: {
@@ -52,17 +52,10 @@ const Styles = StyleSheet.create({
         justifyContent: 'space-between',
         bottom: 40,
     },
-    expensesBoxSaveText: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        alignSelf: 'center',
-        marginLeft: 60,
-        marginTop: 25,
-        color: '#fff',
-    },
     expensesBoxCharge: {
         flexDirection: 'column',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginLeft: 165,
     },
     expensesBoxChargeText: {
         fontSize: 20,
@@ -70,6 +63,11 @@ const Styles = StyleSheet.create({
         alignSelf: 'center',
         marginRight: 60,
         color: '#fff',
+    },
+    emptyCart: { 
+        height: 200,
+        fontSize: 18,
+        color: '#454545'
     },
 })
 

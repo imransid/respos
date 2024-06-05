@@ -8,11 +8,26 @@ import FoodCard from '../../components/FoodCard/FoodCard';
 import {useNavigation} from '@react-navigation/native';
 import {MyContext} from '../../context/Context';
 import CartItems from '../CartItems/CartItems';
+import SearchFoods from '../../components/SearchFoods/SearchFoods';
 
 export default function HomeScreen() {
   const navigation = useNavigation();
   const [totalPrice, setTotalPrice] = useState(0);
   const {cart, setCart} = useContext(MyContext);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredFoodItems, setFilteredFoodItems] = useState(foodItems);
+  const [showSearchBox, setShowSearchBox] = useState(false);
+
+  useEffect(() => {
+    if (searchQuery.length> 0) {
+      const filtered = foodItems.filter(item =>
+        item.title?.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setFilteredFoodItems(filtered);
+    } else{
+      setFilteredFoodItems([])
+    }
+  }, [searchQuery]);
 
   // go to payment screen
   const showBill = () => {
@@ -35,6 +50,10 @@ export default function HomeScreen() {
     navigation.navigate('CartItems', CartItems);
   };
 
+  const toggleSearchBox = () => {
+    setShowSearchBox(!showSearchBox);
+  };
+
   return (
     <View style={HomeStyle.homeContainer}>
       <View style={HomeStyle.expensesBox}>
@@ -45,15 +64,11 @@ export default function HomeScreen() {
           <Text style={HomeStyle.expensesBoxSaveText}>SAVE</Text>
         </TouchableOpacity>
         <View style={HomeStyle.expensesBoxCharge}>
-          <TouchableOpacity
-            onPress={() => {
-              showBill();
-            }}>
+
             <Text style={HomeStyle.expensesBoxChargeText}>CHARGE</Text>
             <Text style={HomeStyle.expensesBoxChargeText}>
               {totalPrice.toFixed(2)}
             </Text>
-          </TouchableOpacity>
         </View>
       </View>
       <View style={HomeStyle.foodItemsBox}>
@@ -63,7 +78,7 @@ export default function HomeScreen() {
             <TouchableOpacity>
               <Icon name="caret-down" size={25} color="#454545" />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={toggleSearchBox}>
               <Icon1
                 name="magnifying-glass"
                 size={20}
@@ -73,9 +88,15 @@ export default function HomeScreen() {
             </TouchableOpacity>
           </View>
         </View>
+        {showSearchBox && (
+          <SearchFoods
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+          />
+        )}
         <FlatList
           showsVerticalScrollIndicator={false}
-          data={foodItems}
+          data={filteredFoodItems.length>0 ? filteredFoodItems : foodItems }
           style={HomeStyle.foodItemsList}
           numColumns={3}
           keyExtractor={(item, index) => index.toString()}
