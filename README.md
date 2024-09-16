@@ -1,8 +1,8 @@
-<p float="left">
-  <img src="[/img1.png](https://github.com/user-attachments/assets/5020859a-3100-40f7-920f-1ece493909d0)" width="100" />
-  <img src="/img2.png" width="100" /> 
-  <img src="/img3.png" width="100" />
-</p>
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![Image1](https://github.com/user-attachments/assets/8c415b2e-52b1-4899-91fa-65d2df5b0093)  |  ![Image2](https://github.com/user-attachments/assets/d789bce1-f15a-4725-81bb-4da27f532b46)
+
+
 
 
 
