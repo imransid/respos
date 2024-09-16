@@ -1,3 +1,11 @@
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![Image1](https://github.com/user-attachments/assets/5020859a-3100-40f7-920f-1ece493909d0)  |  ![Image2](https://github.com/user-attachments/assets/c32ee8c1-265c-47f1-b296-2f8a99eaa3ed)
+
+
+
+
+
 ![Image1](https://github.com/user-attachments/assets/5020859a-3100-40f7-920f-1ece493909d0)  ![Image2](https://github.com/user-attachments/assets/c32ee8c1-265c-47f1-b296-2f8a99eaa3ed)
 
 
